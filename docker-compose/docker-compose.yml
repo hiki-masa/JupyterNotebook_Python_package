@@ -6,8 +6,9 @@ services:
       context: ../
       dockerfile: Dockerfile/Dockerfile
     volumes:
-      - ../src/:/app/src/
+      - ../ipynb/:/app/ipynb/
       - ../dataset/:/app/dataset/
+      - ../pytest/:/app/pytest/
     working_dir:
       /app
     image: jupyter-notebook_python_package
